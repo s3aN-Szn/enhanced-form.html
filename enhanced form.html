@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced HTML5 Content & Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #333;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    form {
+      max-width: 600px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    fieldset {
+      border: 1px solid #aaa;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>📘 HTML5 Content & Form Showcase</h1>
+    <p>This page demonstrates the use of lists, tables, media, and a complete HTML5 form with validation.</p>
+  </header>
+
+  <!-- Lists Section -->
+  <section>
+    <h2>1. Lists</h2>
+    <p>Here are some HTML5 features covered in this assignment:</p>
+    <ul>
+      <li>Semantic elements for better structure</li>
+      <li>Tables for organized data</li>
+      <li>Embedding media</li>
+      <li>HTML5 form attributes & validation</li>
+    </ul>
+
+    <p>Steps to build a great form:</p>
+    <ol>
+      <li>Plan your form fields</li>
+      <li>Use correct input types</li>
+      <li>Add labels for accessibility</li>
+      <li>Apply HTML5 validation</li>
+    </ol>
+  </section>
+
+  <!-- Table Section -->
+  <section>
+    <h2>2. Tables</h2>
+    <p>Example: HTML5 Input Types Overview</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Input Type</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>email</td>
+          <td>Ensures valid email format</td>
+        </tr>
+        <tr>
+          <td>tel</td>
+          <td>Accepts telephone numbers</td>
+        </tr>
+        <tr>
+          <td>date</td>
+          <td>Allows picking dates</td>
+        </tr>
+        <tr>
+          <td>number</td>
+          <td>Restricts to numeric input</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Media Section -->
+  <section>
+    <h2>3. Media</h2>
+    <p>Here’s an example of embedded media:</p>
+    <figure>
+      <img src="https://via.placeholder.com/500x250" alt="Placeholder Image">
+      <figcaption>Sample image embedded in HTML5</figcaption>
+    </figure>
+
+    <p>Audio Example:</p>
+    <audio controls>
+      <source src="sample.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p>Video Example:</p>
+    <video width="500" controls>
+      <source src="sample.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+  </section>
+
+  <!-- Form Section -->
+  <section>
+    <h2>4. HTML5 Form</h2>
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+254700000000" pattern="^\+?[0-9]{10,15}$" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required minlength="4" maxlength="12">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" id="confirm" name="confirm" required minlength="6">
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">-- Select Country --</option>
+          <option value="Kenya">Kenya</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="India">India</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label>
+          <input type="checkbox" name="subscribe" value="newsletter" checked>
+          Subscribe to newsletter
+        </label>
+
+        <label>
+          <input type="radio" name="updates" value="email" required>
+          Receive updates via Email
+        </label>
+        <label>
+          <input type="radio" name="updates" value="sms">
+          Receive updates via SMS
+        </label>
+
+        <label for="feedback">Feedback / Comments:</label>
+        <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+      </fieldset>
+
+      <input type="submit" value="Submit Form">
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 HTML5 Assignment – All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
